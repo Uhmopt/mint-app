@@ -1,7 +1,7 @@
 import "./App.css";
 import { useMemo } from "react";
 
-// import Home from "./Home";
+import Home from "./Home";
 
 import * as anchor from "@project-serum/anchor";
 import { clusterApiUrl } from "@solana/web3.js";
@@ -52,7 +52,7 @@ const App = () => {
     <ConnectionProvider endpoint={endpoint}>
       <WalletProvider wallets={wallets} autoConnect>
         <WalletDialogProvider>
-          <h1>hello world</h1>
+          <div>Thanks alot</div>
           {/* <Home
             candyMachineId={candyMachineId}
             config={config}
