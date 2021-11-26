@@ -52,15 +52,14 @@ const App = () => {
     <ConnectionProvider endpoint={endpoint}>
       <WalletProvider wallets={wallets} autoConnect>
         <WalletDialogProvider>
-          <div>Thanks alot</div>
-          {/* <Home
+          <Home
             candyMachineId={candyMachineId}
             config={config}
             connection={connection}
             startDate={startDateSeed}
             treasury={treasury}
             txTimeout={txTimeout}
-          /> */}
+          />
         </WalletDialogProvider>
       </WalletProvider>
     </ConnectionProvider>
