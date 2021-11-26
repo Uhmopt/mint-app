@@ -1,0 +1,50 @@
+.footer-bar {
+  display: flex;
+  padding: 16px 50px;
+  position: fixed;
+  bottom: 0;
+  justify-content: space-between;
+  z-index: 4;
+  width: -webkit-fill-available;
+}
+
+.copyright-div {
+  display: flex;
+  align-items: center;
+}
+
+.copyright-text {
+  font-size: 16px;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.company-text {
+  font-size: 16px;
+  font-weight: 500;
+  margin-left: 5px;
+}
+
+.social-media-div {
+  display: flex;
+  align-items: center;
+}
+
+.social-media-icon {
+  font-size: 24px;
+  margin-right: 20px;
+  cursor: pointer;
+}
+
+.social-media-icon:hover {
+  opacity: 0.5;
+}
+
+.mr-0 {
+  margin-right: 0;
+}
+
+@media (min-width: 320px) and (max-width: 767px) {
+  .footer-bar {
+    display: none;
+  }
+}
