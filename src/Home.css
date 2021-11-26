@@ -133,16 +133,17 @@
 }
 
 .connect-wallet-btn {
+    box-shadow: -0.15px 8px 0 -2px rgb(171 149 63 / 0%);
     margin-top: 3px !important;
     outline: none;
-    width: 213px;
+    width: 230px;
     height: 45px;
     display: flex;
     justify-content: center;
     align-items: center;
     cursor: pointer;
-    transition: all 0.2s ease, visibility 0s;
-    border-radius: 10px;
+    transition: all 0.2s ease, visibility 0s !important;
+    border-radius: 4px;
     font-weight: 800;
     cursor: pointer;
     font-family: "MyWebFont" !important;
@@ -151,7 +152,12 @@
     border: 1px solid #ffffff !important;
     color: #fff;
     border: 1px solid #fff;
+    background: no-repeat padding-box border-box 50% / cover scroll url(assets/images/mint_btn.webp);
     background-color: rgba(0, 0, 0, 0.75) !important;
+}
+
+.connect-wallet-btn:hover {
+    background: rgba(0, 0, 0, 0.75);
 }
 
 .mint-btn {
@@ -457,11 +463,16 @@
     color: #fff;
     background-color: rgba(0, 0, 0, 0.75);
     box-shadow: -0.15px 8px 0 -2px rgb(171 149 63 / 0%);
+    background: no-repeat padding-box border-box 50% / cover scroll url(assets/images/mint_btn.webp);
+    -webkit-transition: ;
+    -moz-transition: ;
+    -ms-transition: ;
+    -o-transition: ;
 }
 
 .mint-dragon-btn:hover {
     border: 1px solid #ffffff;
-    background: #000000;
+    background: rgba(0, 0, 0, 0.75);
 }
 
 .mint-details .mint-description h2 {
@@ -488,9 +499,11 @@
 
 .mint-img-address {
     display: flex;
-    justify-content: space-between;
     padding: 0 30px;
-    width: 40%;
+    justify-content: center;
+    align-items: center;
+    width: 30%;
+    /* width: 40%; */
 }
 
 .mint-details {

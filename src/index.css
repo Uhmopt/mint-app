@@ -4,6 +4,10 @@
     src: url("assets/font/Pixeboy.ttf");
 }
 
+* {
+    font-family: "MyWebFont";
+}
+
 body {
     margin: 0;
     overflow-x: hidden;

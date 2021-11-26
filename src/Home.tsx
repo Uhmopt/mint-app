@@ -255,14 +255,15 @@ const Home = (props: HomeProps) => {
                 </button>
               )}
             </div>
-            <div className="mint-row-center">
+            {/* <div className="mint-row-center">
               {wallet.connected && (
                 <span className="wallet-address">
                   Wallet Address: <br />
                   {shortenAddress(wallet.publicKey?.toBase58() || "")}
                 </span>
+                
               )}
-            </div>
+            </div> */}
           </div>
           <div className="mint-details">
             <div className="mint-description">
@@ -300,166 +301,9 @@ const Home = (props: HomeProps) => {
                   )}
                 </div>
               </div>
-
-              {/* <MintContainer className="mintContainer">
-                {wallet.connected && (
-                  <div className="flex-column">
-                    <div className="mint-slider-container">
-                      <div className="mint-slider">
-                        <Slider
-                          className="slider-css"
-                          defaultValue={0}
-                          step={25}
-                          min={1}
-                          marks={mintRange}
-                          valueLabelDisplay="on"
-                          onChange={onSliderValueChange}
-                          valueLabelFormat={(value) => (
-                            <div>
-                              {Math.floor(value / 25) == 0
-                                ? 1
-                                : Math.floor(value / 25) + 1}
-                            </div>
-                          )}
-                        />
-                      </div>
-                      <MintButton
-                        className="mint-btn"
-                        disabled={isSoldOut || isMinting || !isActive}
-                        onClick={onMint}
-                        variant="contained"
-                      >
-                        {isSoldOut ? (
-                          "Sold Out"
-                        ) : isActive ? (
-                          isMinting ? (
-                            <CircularProgress />
-                          ) : (
-                            <span> {mintValue} Mint</span>
-                          )
-                        ) : (
-                          <Countdown
-                            date={startDate}
-                            onMount={({ completed }) =>
-                              completed && setIsActive(true)
-                            }
-                            onComplete={() => setIsActive(true)}
-                            renderer={renderCounter}
-                          />
-                        )}
-                      </MintButton>
-                    </div>
-                  </div>
-                )}
-              </MintContainer> */}
             </div>
           </div>
         </div>
-        {/* <div className="section-body content-container">
-          <div className="section-content">
-            <div className="flex-column">
-              <span
-                className={[
-                  "mint-section-title title-center",
-                  wallet.connected ? "wallet-connected-title" : "",
-                ].join(" ")}
-              >
-                NFT Public Sale
-              </span>
-              <div className="mint-row-center">
-                {wallet.connected && (
-                  <span className="wallet-address">
-                    Wallet Address:{" "}
-                    {shortenAddress(wallet.publicKey?.toBase58() || "")}
-                  </span>
-                )}
-              </div>
-              <div className="mint-desc-grid">
-                <div className="mint-desc-container">
-                  <span className="mint-desc-heading">Wallet Balance</span>
-                  {!wallet.connected ? (
-                    <span className="mint-desc-value">0.00 SOL</span>
-                  ) : (
-                    <span className="mint-desc-value">
-                      {(balance || 0).toLocaleString()}
-                    </span>
-                  )}
-                </div>
-                <div className="mint-desc-container">
-                  <span className="mint-desc-heading">NFT Price</span>
-                  <span className="mint-desc-value">0.001 SOL</span>
-                </div>
-                <div className="mint-desc-container">
-                  <span className="mint-desc-heading">NFTs Minted</span>
-                  {!wallet.connected ? (
-                    <span className="mint-desc-value">0</span>
-                  ) : (
-                    <span className="mint-desc-value">{nftCount}</span>
-                  )}
-                </div>
-              </div>
-              <div className="mint-row-center">
-                {!wallet.connected && (
-                  <ConnectButton className="connect-wallet-btn">
-                    Connect Wallet
-                  </ConnectButton>
-                )}
-              </div>
-
-              <MintContainer className="mintContainer">
-                {wallet.connected && (
-                  <div className="flex-column">
-                    <div className="mint-slider-container">
-                      <div className="mint-slider">
-                        <Slider
-                          className="slider-css"
-                          defaultValue={0}
-                          step={25}
-                          min={1}
-                          marks={mintRange}
-                          valueLabelDisplay="on"
-                          onChange={onSliderValueChange}
-                          valueLabelFormat={(value) => (
-                            <div>
-                              {Math.floor(value / 25) == 0
-                                ? 1
-                                : Math.floor(value / 25) + 1}
-                            </div>
-                          )}
-                        />
-                      </div>
-                      <MintButton
-                        className="mint-btn"
-                        disabled={isSoldOut || isMinting || !isActive}
-                        onClick={onMint}
-                        variant="contained"
-                      >
-                        {isSoldOut ? (
-                          "Sold Out"
-                        ) : isActive ? (
-                          isMinting ? (
-                            <CircularProgress />
-                          ) : (
-                            <span> {mintValue} Mint</span>
-                          )
-                        ) : (
-                          <Countdown
-                            date={startDate}
-                            onMount={({ completed }) =>
-                              completed && setIsActive(true)
-                            }
-                            onComplete={() => setIsActive(true)}
-                            renderer={renderCounter}
-                          />
-                        )}
-                      </MintButton>
-                    </div>
-                  </div>
-                )}
-              </MintContainer>
-            </div>
-          </div>
-        </div> */}
       </section>
 
       <Dialog
